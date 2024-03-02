@@ -1,0 +1,17 @@
+/* Wildcard selector to overide default styling added by browser*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Some simple styling */
+header{
+    background-color: blueviolet;
+}
+main{
+    background-color: cornflowerblue;
+}
+footer{
+    background-color: darkorange;
+}
