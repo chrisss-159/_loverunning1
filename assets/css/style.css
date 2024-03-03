@@ -26,6 +26,9 @@ header{
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 #menu {
@@ -51,6 +54,21 @@ positioned relative to the nearest positioned ancester(the header in this case*/
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     display:none;
+/* W/o below, navmenu will cover header*/
+/*due to CSS positioning behavor when flex property applied*/
+/* tells top of element to start at bottom of parent element (0% top/ 100% bottom of parent element)*/
+    top: 100%;
+}
+/*Nav toggle - pseudo class for check box*/
+#nav-toggle:checked~nav{
+    display:block;
+}
+/*To remove the checkbox*/
+#nav-toggle {
+    display: none;
+}
+.nav-toggle-label {
+    font-size: 2rem;
 }
 header a {
     text-decoration: none;
@@ -59,7 +77,7 @@ header a {
 h1 {
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
-    letter-spacing:2px;
+    letter-spacing: 2px;
     color: #252525;
 }
 main{
