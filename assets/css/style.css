@@ -1,5 +1,5 @@
 /*Google font inport*/
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Ojuju:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 /* Wildcard selector to overide default styling added by browser*/
 * {
@@ -40,20 +40,20 @@ header{
     margin-bottom: 1em;
 }
 .active { 
-    border-bottom:1px solid #3a3a3a;
+    border-bottom: 1px solid #3a3a3a;
 }
 /*Navbar styling for toggle dropdown menu*/
 
 nav{
 /*Absolute pos:takes a element of the normal flow of the page, 
 positioned relative to the nearest positioned ancester(the header in this case*/
-    position:absolute;
+    position: absolute;
     background-color: #ffffff;
     left: 0;
     width: 100%;
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
-    display:none;
+    display: none;
 /* W/o below, navmenu will cover header*/
 /*due to CSS positioning behavor when flex property applied*/
 /* tells top of element to start at bottom of parent element (0% top/ 100% bottom of parent element)*/
@@ -84,8 +84,21 @@ main{
     background-color: cornflowerblue;
     /* Make main element take up surplus space and push footer down*/
     flex:1 0 auto;
+    margin-top: 47px;
 
 }
 footer{
     background-color: darkorange;
+}
+/*Media query for tables and larger: 768px and up*/
+@media screen and (min-width: 768px) {
+/*Header (nav links)*/
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
 }
